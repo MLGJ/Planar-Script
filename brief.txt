@@ -1,0 +1,53 @@
+always preceded with a "$" symbol ( "$myVar" )
+no white spaces allowed
+can not start with a number ( "$2" )
+a variable's type cannot be redefined once it is created, until the maya session is ended.
+
+
+
+
+-What it does: 
+		Creates a GUI and tries to make polygonal components planar along X,Y,Z, or a Best Plane with options
+
+
+		
+		
+
+	-Planarize to: controls which axis to make components planar
+		[ X ] [ Y ] [ Z ] = typical Axes to make planar upon
+		[ Best Plane ]	  = Allows script to try and find an arbitrary plane
+	-Position: determines the position for the CENTER of the plane
+			[Avg] = Average positions (will weight towards position of more selections)
+			[Ctr] = Center of boundbox (NOT quite the same as Avg, but faster) 
+			[Obj] = Object's pivot
+	-Orientation: determines the direction of Axes for the plane (doesn't affect Best Plane)
+			[Wrld] = Uses World space to determine direction
+			[Obj]  = Uses Object space to determine direction
+			
+			
+			//vars
+
+optionVar: FBpolyPlanarizePivPos 
+optionVar: FBpolyPlanarizePivOrnt
+
+
+			//procs
+1.			
+//////////////////////////////////////////////////////////////////
+//proc: FBpolyPlanarizeDoIt(int $FBppInput)						//
+//Desc: aligns the components on a plane based on $FBppInput	//
+//   $FBppInput:												//
+//			0: align to X										//
+//			1: align to Y										//
+//			2: align to Z										//
+//			3: align to 'Best Plane'							//
+//////////////////////////////////////////////////////////////////
+2.			
+//////////////////////////////////////////////////////////////////
+//proc: FBpolyPlanarize()										//
+//Desc: main proc that creates GUI for FBpolyPlanarizeDoIt	    //
+//////////////////////////////////////////////////////////////////
+
+
+
+

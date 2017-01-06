@@ -1,0 +1,9 @@
+global proc polyPlanar (int $ppInput)
+{
+	int $ppPivPos, $ppPivOrnt;
+	
+	if (!`optionVar -ex FBpolyPlanarizePivPos`)
+		optionVar -iv FBpolyPlanarizePivPos 1;
+	if (!`optionVar -ex FBpolyPlanarizePivOrnt`)
+		optionVar -iv FBpolyPlanarizePivOrnt 1;
+}
