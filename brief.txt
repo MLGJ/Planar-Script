@@ -51,3 +51,10 @@ optionVar: FBpolyPlanarizePivOrnt
 
 
 
+float $param = 1.5;
+int $counter = 10;
+string $name = "Alice";
+vector $position = <<1.5, 2.5, 3.5>>;
+
+
+
